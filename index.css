@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Syne:wght@800&display=swap');
+
+
+
+:root {
+    --white: #fff;
+    --black: #121212;
+    --darkblue: #171d25;
+    --tor: #40E0D0;
+    --offwhite: #dddddd;
+    --blue:#014AAD;
+    --Lblue:#ADD8E6;
+}
+
+*{
+    font-family: "League Spartan", sans-serif; 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--black);
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: var(--black);
+}
+
+h4{
+    font-size: 20px;
+    color: var(--black);
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+
+p{
+    font-size: 16px;
+    color: var(--black);
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+
+body{
+    width: 100%;
+    background: var(--offwhite);
+}
+
+/*header*/
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px; 
+    background: var(--white);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position:sticky;
+    z-index: 999;
+    top: 0;
+    left: 0;
+
+}
+.logo{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--black);
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover{
+   color: var(--tor);
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
+/*home page*/
+
+.front{
+    margin-top: 50px;
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 45% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+.front h4{
+    padding-bottom:15px;
+    z-index: -1;
+    
+}
+
+.front h1{
+    color: var(--Lblue);
+    z-index: -1;
+}
+
+
+.front button{
+    background-color: var(--Lblue);
+    color: var(--white);
+    border: 0;
+    padding: 14px 10px 14px 10px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    z-index: -1;
+}
+
+.front .Holder{
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 45% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative; /* Add position relative */
+}
+
+.front .swiper-slide:first-child .Holder {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 50px; /* Add padding or adjust as needed */
+    z-index: 100; /* Adjust z-index if needed */
+}
+
+/* swiper home page*/
+ .front .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .front .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .front .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+ .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+
+
+/*Products part*/
+
+#products{
+    text-align: center;
+
+}
+
+#products .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#products .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    cursor:pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transform: 0.2 ease;
+    border-radius: 25px;
+}
+
+#products .pro:hover{
+    box-shadow: 20px 20px 30px rgba(22, 22, 22, 0.02);
+    transform: scale(1.19);
+}
+
+#products .pro img{
+    width: 100%;
+    
+
+}
+
+#products .pro .des{
+    text-align: center;
+    padding: 10px 0;
+}
+
+#products .pro .des span{
+    color: #606063;
+    font-size: 12px;
+
+}
+
+#products .pro .des h5{
+    padding-top: 7px;
+    color: var(--black);
+    font-size: 14px;
+}
+
+#products .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+/* Banners */
+
+#banner{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/banner.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 0;
+    
+}
+
+#banner h4{
+    color: #fff;
+    font-size: 20px;
+}
+
+#banner h2{
+    color: #fff;
+    font-size: 60px;
+    padding: 15px 0;
+}
+
+/* Banners 2 */
+
+#sm-banner .banner-box{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+    background-image: url(img/b15.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#sm-banner .banner-box2{
+    
+    background-image: url(img/b17.jpg);
+    align-items: flex-end;
+   
+}
+
+#sm-banner .banner-box2 h2{
+    
+    margin-right: 100px;
+   
+}
+
+#sm-banner .banner-box3{
+    
+    background-image: url(img/b14.jpg);
+   
+}
+
+
+#sm-banner h2{
+
+    color: #fff;
+    font-size: 50px;
+    font-weight: 800;
+    margin-left: 100px;
+
+}  
+
+#sm-banner .white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: var(--white);
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid var(--white);
+    outline: none;
+    transition: 0.2;
+}
+
+#sm-banner .banner-box:hover button{
+    background: var(--white);
+    color: var(--black);
+    border:1px solid var(--white);
+}
+
+/* Listings */
+
+#signup{
+    margin-top: 40px;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--blue);
+
+}
+
+#signup h4{
+    font-size: 30px;
+    font-weight:700;
+    color: var(--white);
+
+}
+
+#signup p{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--offwhite);
+
+}
+
+#signup button{
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+}
+
+.normal{
+    font-size: 19px;
+    border:none;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* footer */
+footer {
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative; /* Add this */
+    padding-bottom: 20px; /* Add some padding at the bottom */
+}
+footer .logo{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h4{
+   font-size: 20px;
+   padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 16px;
+    margin: 0 0 8px 0;
+
+}
+
+footer a{
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+
+footer .follow i{
+    padding-right: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+footer .copyright{
+    text-align: center; /* Center the text */
+    width: 100%; /* Make it take full width */
+    position: absolute; /* Position it absolutely */
+    bottom: 0; /* Stick it to the bottom */
+    left: 0; /* Center it horizontally */
+}
+
+footer .about{
+    margin-right: 300px;
+}
+
+
+/* Shop Page */
+
+#page-header{
+    background-image: url("img/b1.jpg");
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    background-size:cover;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#page-header h2, #page-header p{
+    color: var(--white);
+}
+
+
+/*swiper stuff*/
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mySwiper2 {
+    height: 80%;
+    width: 100%;
+  }
+
+  .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+#prodetails .single-pro-image{
+    width: 40%;
+    height: 100%;
+    margin-right: 50px;
+}
+
+#prodetails{
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prodetails .single-pro-details h6{
+    font-size: 16px;
+}
+
+#prodetails .single-pro-details h4{
+    font-size: 25px;
+    padding: 40px 0 20px 0;  /* top | right | bottom | left */
+}
+
+#prodetails .single-pro-details h2{
+    padding: 26px 0;
+}
+
+#prodetails .single-pro-details button{
+    background-color: var(--blue);
+    color:var(--white);
+}
+
+#prodetails .single-pro-details span{
+    line-height: 25px;
+}
+
+/*popout stuff*/
+
+.popup{
+    width: 600px;
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 50px;
+    z-index: 1001; /* Adjust the z-index value as needed to ensure it's above other elements */
+    visibility: hidden;
+    transition: transform 0.4, top 0.4s;
+ }
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+ }
+
+
+
+
+/*responsive stuff*/
+
+@media(max-width:799px) {
+
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: var(--white);
+        box-shadow:0 40px 60px;
+        padding: 80px 0 0 10px;
+    }
+
+    #navbar.active{
+        right:0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    .section-p1{
+        padding: 40px 40px;
+    }
+
+    .front{
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30%  right 30% ;
+    }
+
+    #products .container {
+       
+        justify-content: center;
+      
+    }
+
+    #products .pro {
+     
+        margin: 15px ;
+    }
+
+    #sm-banner .banner-box3 {
+        background-position: top right 10%;
+    }
+
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: var(--black);
+        font-size:24px;
+    }
+
+    #page-header{
+        background-position: 50%  ;
+    }
+        
+
+}
+
+@media(max-width:477px){
+
+    #header{
+        padding: 10px 30px;
+    }
+
+    .front {
+        
+        padding: 0 20px;
+        background-position: top right 10%;
+    }
+
+    h2{
+        font-size:38px ;
+    }
+
+    h1{
+        font-size: 32px;
+    }
+
+
+    #products .pro {
+     
+        width: 100%;
+    }
+
+   
+}
+
+  
+
+
+
+
